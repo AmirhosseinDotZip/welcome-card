@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg: hsl(320, 30%, 75%);
+    --card-bg: hsl(247, 63%, 51%);
+}
+
+body {
+    background-color: var(--bg);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 18px;
+}
+
+.card {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.main-info {
+    box-shadow:0 0 10px 1px var(--card-bg);
+    background-color: var(--card-bg);
+    border-radius: 25px 25px 0 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.dev-info {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    margin-bottom: 1em;
+}
+
+.dev-bio {
+    text-align: center;
+}
+
+.dev-info img {
+    display: block;
+    height: 50px;
+    clip-path: circle();
+}
+.name-job p {
+    opacity: .7;
+}
+.close {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.close span {
+    position: absolute;
+    width: 2px;
+    height: 15px;
+    background-color: white;
+    border-radius: 20px;
+
+}
+.close span:first-of-type {
+    transform: rotate(45deg);
+}
+.close span:last-of-type {
+    transform: rotate(-45deg);
+}
+
+.close:hover span {
+    background-color: tomato;
+}
+
+
+/* feedbacl */
+
+
+.feedback {
+    border-radius: 0 0 25px 25px;
+    background-color: white;
+    /* height: 50px; */
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+
+input {
+    border: none;
+    width: 70%;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+input::placeholder {
+    opacity: 0.2;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--card-bg);
+    margin-right: 1em;
+    cursor: pointer;
+}
+button:hover {
+    color: hsl(247, 63%, 70%);
+}
